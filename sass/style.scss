@@ -1,0 +1,374 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block; }
+
+body {
+line-height: 1;
+font-family: 'Lato', sans-serif;}
+
+ol, ul {
+list-style: none; }
+
+blockquote, q {
+quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none; }
+
+table {
+border-collapse: collapse;
+border-spacing: 0; }
+
+img {
+width: 100%;
+height: 100%; }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  background: transparent;
+  line-height: 1;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section.module h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: rgba(204,204,204,1);
+}
+
+section.module p {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+}
+
+section.module p:last-child {
+  margin-bottom: 0;
+}
+
+section.module.content {
+  padding: 60px 0;
+  text-align: left;
+}
+
+section.module.parallax {
+  // height: 800px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax-1 {
+  height: 100vh;
+}
+
+section.module.parallax-2 {
+  background-image: url(../img/surfbeach.jpg);
+  background-position: center;
+
+}
+
+section.module.parallax-3 {
+  background-image: url(../img/sunrisesurf.jpg);
+}
+
+@media all and (min-width: 600px) {
+    section.module h2 {
+    font-size: 38px;
+    }
+
+    section.module a {
+    font-size: 22px;
+    }
+
+    section.module.parallax h1 {
+    font-size: 82px;
+    }
+
+}
+
+@media all and (min-width: 960px) {
+    section.module.parallax h1 {
+    font-size: 145px;
+    }
+}
+
+@media all and (max-width: 680px) {
+     section.module.content {
+     text-align: center;
+     }
+}
+
+.videobg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+
+
+.white {
+  background-color: #fff;
+}
+
+.white h2{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+  width: (100/12) * $i + %;
+  padding: 10px;
+  float:left;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  &::before,
+  &::after{
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+.row {
+  &::before,
+  &::after{
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+
+
+[class*='col-']{
+  float:left;
+  padding: 15px;
+  }
+
+.navWidth {
+  width: 100%;
+}
+
+@media all and (max-width: 720px){
+  [class*='col-']{
+    width: 100%;
+    padding: 15px;
+    }
+}
+
+.down-only {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-down-open {
+  font-size: 50px;
+  bottom: 30px;
+  position: absolute;
+  color: white;
+  animation: updown 1s infinite linear;
+  transition: transform .5s ease-in-out;
+}
+
+.icon-down-open:hover {
+  cursor: pointer;
+  transform: rotate(360deg);
+}
+
+@keyframes updown {
+  0% {bottom: 40px;}
+  50% {bottom: 30px;}
+  100% {bottom: 40px;}
+}
+
+.plan {
+  text-align: center;
+}
+
+.price-tabele {
+  padding-top: 50px;
+}
+
+.plan-header {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.plan-header h4{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+
+.plan-price {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  padding: 30px 0 30px;
+}
+
+.plan-list {
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  color: #fff;
+  padding: 0 5px 0 5px;
+}
+
+.plan-list ul li {
+  padding: 10px;
+  border-bottom: 1px solid white;
+  font-weight: 700;
+}
+
+.plan-list ul li:last-child {
+  padding: 10px;
+  font-weight: 700;
+  border-bottom: none;
+}
+
+.redbtn {
+  background-color: rgba(192, 57, 43, 0.6);
+  color: #fff;
+  padding: 5px;
+  top: 10px;
+  bottom: 10px;
+}
+
+.redbtn a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.aboutMaroco{
+  float: left;
+}
+
+.navbar-nav {
+  text-transform: uppercase;
+}
+
+.placesDiscription,
+.container h4 {
+  color: white;
+  text-align: center;
+}
+
+.galleryPlaces li:hover {
+  cursor: pointer;
+}
+
+.bigimg {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fit-img {
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 80%;
+    left: 20px;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    width: 88%;
+
+  }
+
+  .scrollup:hover {
+    filter: invert(100%);
+  }
+
+  @media all and (min-width: 960px){
+    .scrollup {
+      width: 170px;
+      height: 170px;
+      text-decoration: none;
+      background: url(../img/scrollup.png) no-repeat 0px 0px;
+      position: fixed;
+      right: -10px;
+      bottom: -15px;
+      display: none;
+      z-index: 999;
+    }
+  }
+
+  @media all and (max-width: 959px){
+    .scrollup {
+      width: 30px;
+      height: 30px;
+      text-decoration: none;
+      background: url(../img/minscrollup.png) no-repeat 0px 0px;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: none;
+      z-index: 999;
+    }
+  }
